@@ -39,3 +39,19 @@ function getComputerChoice() {
     return "Invalid selection";
   }
 }
+function game() {
+  const playerSelection = prompt("Enter your choice:Rock,Paper,Scissors");
+  const computerSelection = getComputerChoice();
+  const roundWinner = rockPaperScissors(playerSelection, computerSelection);
+  console.log(roundWinner);
+  if (roundWinner === "You win") {
+    console.log("You won the round");
+  } else if (roundWinner === "You lose") {
+    console.log("You lost the round");
+  } else if (roundWinner === "It is a draw") {
+    console.log("The game is a draw");
+  } else {
+    console.log("Invalid move");
+  }
+}
+game();
