@@ -26,3 +26,16 @@ function rockPaperScissors(playerSelection, computerSelection) {
     return "Invalid player selection"; // invalid selection
   }
 }
+function getComputerChoice() {
+  const randomNum = Math.floor(Math.random() * 3);
+  if (randomNum === 0) {
+    return "rock";
+  } else if (randomNum === 1) {
+    return "paper";
+  }
+  if (randomNum === 2) {
+    return "scissors";
+  } else {
+    return "Invalid selection";
+  }
+}
